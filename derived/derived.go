@@ -2,28 +2,28 @@ package derived
 
 import "example.com/crtp/base"
 
-// Sceptic is an example implementation
-type Sceptic struct {
-	base.Person[Sceptic]
+// DerivedA is an example implementation
+type DerivedA struct {
+	base.Base[DerivedA]
 }
 
-func (Sceptic) Name() string {
+func (DerivedA) Name() string {
 	return "Reasonable person"
 }
 
-func (Sceptic) Message() string {
+func (DerivedA) Message() string {
 	return "Please don't do this in real code"
 }
 
-// Believer is an example implementation
-type Believer struct {
-	base.Person[Believer]
+// DerivedB is an example implementation
+type DerivedB struct {
+	base.Base[DerivedB]
 }
 
-func (Believer) Name() string {
-	return "Intern"
+func (DerivedB) Name() string {
+	return "Edu"
 }
 
-func (Believer) Message() string {
+func (DerivedB) Message() string {
 	return "I'm going to do this everywhere!"
 }
