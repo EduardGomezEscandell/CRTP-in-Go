@@ -2,28 +2,15 @@ package derived
 
 import "example.com/crtp/base"
 
-// DerivedA is an example implementation
-type DerivedA struct {
-	base.Base[DerivedA]
+// Derived is an example implementation
+type Derived struct {
+	base.Base[Derived]
 }
 
-func (DerivedA) Name() string {
-	return "Reasonable person"
-}
-
-func (DerivedA) Message() string {
-	return "Please don't do this in real code"
-}
-
-// DerivedB is an example implementation
-type DerivedB struct {
-	base.Base[DerivedB]
-}
-
-func (DerivedB) Name() string {
+func (Derived) Name() string {
 	return "Edu"
 }
 
-func (DerivedB) Message() string {
-	return "I'm going to do this everywhere!"
+func (Derived) Message() string {
+	return "Please don't do this in real code"
 }

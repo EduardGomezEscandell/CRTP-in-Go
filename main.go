@@ -4,10 +4,8 @@ import "example.com/crtp/derived"
 
 func main() {
 	var (
-		a derived.DerivedA
-		b derived.DerivedB
+		a derived.Derived
 	)
 
-	a.Speak()
-	b.Speak()
+	a.Speak() // -> Prints 'Edu says: Please don't do this in real code'
 }
